@@ -3,13 +3,11 @@
 #include <nRF24L01.h>
 #include "Wire.h" // This library allows you to communicate with I2C devices.
 
-#define pinCE 8
+#define pinCE 8 // RF module pins
 #define pinCSN 9
 
 #define pinPotX A0
 #define pinPotY A1
-#define pinButton1 2
-#define pinButton2 4
 
 RF24 radio(pinCE, pinCSN);
 
@@ -26,18 +24,6 @@ struct Values {
 };
 
 struct Values values = {506, 506, -3000, 0};
-
-char tmp_str[7]; // temporary variable used in convert function
-
-// Prototype of the function
-
-/**
- * @brief : converts int16 to string (resulting strings will have the same length in the debug monitor)
- * 
- * @param i : number to convert
- * @return char* : address of the string
- */
-char* convert_int16_to_str(int16_t i);
 
 void setup() {
   pinMode(pinPotX, INPUT);
@@ -62,6 +48,7 @@ void loop() {
   values.pot_x = analogRead(pinPotX);
   values.pot_y = analogRead(pinPotY);
 
+  // This part of the code wasn't written by myself
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(0x3B); // starting with register 0x3B (ACCEL_XOUT_H) [MPU-6000 and MPU-6050 Register Map and Descriptions Revision 4.2, p.40]
   Wire.endTransmission(false); // the parameter indicates that the Arduino will send a restart. As a result, the connection is kept active.
@@ -76,9 +63,4 @@ void loop() {
   radio.write(&values, sizeof(values));
 
   delay(5);
-}
-
-char* convert_int16_to_str(int16_t i) {
-  sprintf(tmp_str, "%6d", i);
-  return tmp_str;
 }

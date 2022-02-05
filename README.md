@@ -1,2 +1,13 @@
-# arduino-car-project
- 
+# **Arduino-car-project**
+
+Project done by Adrien Louvrier
+
+*Objective* : make an arduino robot car controlled by a transmitter using a gyroscope for direction.
+
+*Description* : There are two versions of this projects : the first one with basic wheels, the second one with mecanum wheels. Mecanum wheels are a specific type of wheels which allows to go to any directions. This version of the project is based on this [video](https://www.youtube.com/watch?v=83tVkgT89dM). You can find more information about how mecanum wheels work thanks to this [video](https://www.youtube.com/watch?v=noqBUEgyQ8A).
+The arduino car and the transmitter are the same for both project, only the code changes a little bit. For this project, I used 3D printing because I wanted to do all by myself making the wheels and reduce the price of the project. However I didn't design the mecanum wheels. You can find the 3D models [here](https://howtomechatronics.com/projects/arduino-mecanum-wheels-robot/). If you want to do a similar project but you don't have 3D printer or don't want to print these pieces, you can buy mecanum wheels directly.
+For both the base of the robot car and transmitter, I designed and 3D printed the pieces. Nevertheless it's not necessary, using a good sized piece of wood is great for the base of the robot car. Gloves and wood can also be used for the transmitter. I used 3D printed pieces to save money and for more modularity.
+
+*Operation* : Turn on the arduino robot car by turning on the switch and turn on the transmitter turing on the battery. For both versions of this project, the joystick is used as an accelerometer and to turn in stationary position. Directions are controlled using the gyroscope. Tip the transmitter forward to move forward, tip the transmitter backward to move backward. While moving forward or backward, you can tip the transmitter on one side to turn. However this feature doesn't work a lot for me. Futhermore, the second version of the project (using mecanum wheels) allows to go on the left and right sides tiping the transmitter on one side or another. This feature doesn't work very well for me. This can be due to a bad printing or a bad assembly or because of the quality of the motors used.
+
+*Manufacturing* : Concerning the manufacturing, I tried to use as much as possible what I have, that's why the result isn't amazing. I 3D designed based for both the arduino robot car and the transmitter compared to screws I had. I used as many screws as possible to keep a good modularity and reparability. I also used glue to stick the different 3D printed pieces but also to reinforce some poorly printed parts.
