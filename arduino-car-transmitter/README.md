@@ -1,4 +1,4 @@
-# **Arduino car transmitter**
+# **Arduino Car Transmitter**
 
 Code written by Adrien Louvrier, 14/07/2021
 

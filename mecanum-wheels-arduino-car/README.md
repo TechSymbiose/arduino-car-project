@@ -1,4 +1,4 @@
-# **AMecanum Wheels Arduino Robot Car**
+# **Mecanum Wheels Arduino Robot Car**
 
 Code written by Adrien Louvrier, 14/07/2021
 
