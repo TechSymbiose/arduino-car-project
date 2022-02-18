@@ -6,7 +6,7 @@ Code written by Adrien Louvrier, 14/07/2021
 
 card used : Arduino Nano
 
-# **Electronic circuit**
+---
 
 ## **List of the components**
 
@@ -18,9 +18,36 @@ potentiometer | 1
 GY-521 gyroscope module | 1
 USB battery | 1
 
-*input* : 
-- GY-521 gyroscope module
-- potentiometer (X axis pin -> pin A0, Y axis pin -> pin A1, Vcc pin -> 5V pin, grd pin -> grd pin)
+# **Electronic circuit**
 
-*output* :
-- RF module (CE pin -> pin 8, CSN pin -> pin 9, SCK pin -> pin 10, M0 pin -> pin 12, M1 pin -> pin 13, Vcc pin -> +5V pin, grd pin -> grd pin)
+## *input* : 
+
+### GY-521 gyroscope module
+
+GY-521 pins | Arduino Nano pins
+--- | ---
+SCL |A5
+SDA | A4
+Vcc | +5V
+grd | grd
+
+### Potentiometer
+
+Potentiometer pins | Arduino Nano pins
+--- | ---
+X axis | A0
+Y axis | A1
+Vcc | +5V
+grd | grd
+
+## *output* :
+
+RF module pins | Arduino Nano pins
+--- | ---
+CE | 8
+CSN | 9
+SCK | 10
+M0 | 12
+M1 | 13
+Vcc | +5V
+grd | grd

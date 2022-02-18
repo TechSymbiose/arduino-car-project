@@ -28,8 +28,6 @@ struct Values values = {506, 506, -3000, 0};
 void setup() {
   pinMode(pinPotX, INPUT);
   pinMode(pinPotY, INPUT);
-  pinMode(pinButton1, INPUT);
-  pinMode(pinButton2, INPUT);
   
   radio.begin();
   radio.openWritingPipe(pipe);
